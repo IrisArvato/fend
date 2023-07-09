@@ -10,6 +10,10 @@
 
 
 /* ---- Base Rules ---- */
+html {
+	scroll-behavior: smooth;
+}
+
 body {
     background: rgb(136,203,171);
     background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
@@ -72,6 +76,11 @@ section {
 
 .navbar__menu li {
     display: inline-block;
+}
+
+.navbar__menu li.active, .navbar__menu li.active a {
+    background-color: #2c2c49;
+	color: #fff;
 }
 
 .navbar__menu .menu__link {
@@ -220,4 +229,12 @@ section.your-active-class .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
+}
+
+.hidden {
+	min-height: unset!important;
+}
+
+.hidden > div > p {
+	display: none;
 }
